@@ -1,6 +1,6 @@
 ﻿# 📚 Katalog Perpustakaan
 
-Halo! 👋 Selamat datang di repository **Katalog Perpustakaan**.
+Hallow! 👋 Selamat datang di repository **Katalog Perpustakaan**.
 
 Project ini dibuat untuk memenuhi tugas Praktikum Pemrograman Web. Website ini dikembangkan menggunakan Express.js dan EJS dengan menerapkan konsep arsitektur Model-View-Controller (MVC).
 
