@@ -1,0 +1,355 @@
+
+/* =================================
+   🎀 PINK PASTEL BOOK CAFE
+================================= */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #f4a9bd;
+    --pink-soft: #ffe8ef;
+    --pink-light: #fff5f7;
+    --pink-dark: #bd718b;
+    --cream: #fffaf5;
+    --brown: #765563;
+    --text: #59434d;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, #ffe0eb 0, transparent 28%),
+        radial-gradient(circle at 90% 80%, #fce1ed 0, transparent 30%),
+        var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+/* Navigasi */
+header {
+    background: rgba(255, 255, 255, 0.88);
+    border-bottom: 2px solid #ffe1ea;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+nav a {
+    color: var(--brown);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--pink-soft);
+    color: var(--pink-dark);
+    transform: translateY(-3px);
+}
+
+/* Area utama */
+main {
+    width: 86%;
+    max-width: 1100px;
+    margin: 55px auto;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 85px 25px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid #ffe0e9;
+    border-radius: 32px;
+    box-shadow: 0 12px 35px rgba(211, 139, 165, 0.12);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "♡";
+    position: absolute;
+    top: 12px;
+    right: 35px;
+    color: #f3b6c9;
+    font-size: 60px;
+    transform: rotate(15deg);
+}
+
+.hero::after {
+    content: "✿";
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    color: #e9a8bf;
+    font-size: 42px;
+}
+
+.label {
+    color: var(--pink-dark);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    color: #a75d79;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.25;
+    margin: 15px 0;
+}
+
+.hero > p:not(.label) {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+h1 {
+    color: #a75d79;
+    font-size: 36px;
+    line-height: 1.35;
+    margin: 12px 0;
+}
+
+.konten > p {
+    margin-bottom: 18px;
+}
+
+/* Tombol cute */
+.tombol {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: 2px solid var(--pink);
+    border-radius: 30px;
+    background: linear-gradient(135deg, #f6b5c9, #e99ab5);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #d989a5;
+    transition: all 0.25s ease;
+}
+
+.tombol:hover,
+.tombol:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 18px rgba(211, 119, 154, 0.3);
+    background: linear-gradient(135deg, #eea1bb, #dc82a3);
+}
+
+.tombol:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 0 #d989a5;
+}
+
+/* Katalog buku */
+.daftar-buku {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    margin: 35px 0;
+    padding: 8px 5px 22px;
+}
+
+.kartu-buku {
+    position: relative;
+    background: rgba(255, 255, 255, 0.94);
+    border: 2px solid #f8d9e3;
+    border-radius: 22px;
+    padding: 22px;
+    overflow-wrap: anywhere;
+    box-shadow: 0 7px 18px rgba(189, 113, 139, 0.1);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* ✨ Kartu buku terangkat saat kursor diarahkan */
+.kartu-buku:hover {
+    transform: translateY(-12px) rotate(-1deg);
+    border-color: #eda8bf;
+    box-shadow: 0 18px 30px rgba(199, 113, 147, 0.23);
+}
+
+/* Sampul buku */
+.sampul {
+    height: 145px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #ffe1eb, #f6bcd0);
+    border: 1px solid #f5c4d4;
+    border-radius: 15px;
+    color: #a75d79;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.6);
+    transition: transform 0.35s ease;
+}
+
+.kartu-buku:hover .sampul {
+    transform: scale(1.03);
+}
+
+.kartu-buku h2 {
+    color: #a75d79;
+    margin: 8px 0;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.kartu-buku p {
+    font-size: 14px;
+}
+
+.kategori {
+    display: inline-block;
+    color: #a75d79;
+    background: #ffe8ef;
+    border-radius: 20px;
+    padding: 3px 12px;
+    margin-top: 14px;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+
+/* Form tambah buku */
+.form-container {
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 38px;
+    border: 2px solid #f8d9e3;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(189, 113, 139, 0.12);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+label {
+    color: #885a6c;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #f3d6e0;
+    border-radius: 12px;
+    font: inherit;
+    background: #fffafd;
+    color: var(--text);
+    margin-bottom: 10px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #e79bb5;
+    box-shadow: 0 0 0 4px rgba(244, 169, 189, 0.2);
+}
+
+input::placeholder {
+    color: #c1a6b1;
+}
+
+button.tombol {
+    align-self: flex-start;
+    font: inherit;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    color: #a77e8d;
+    font-size: 13px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    main {
+        width: 91%;
+        margin: 30px auto;
+    }
+
+    .hero {
+        padding: 60px 18px;
+        border-radius: 24px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .form-container {
+        padding: 24px;
+    }
+
+    .daftar-buku {
+        gap: 20px;
+    }
+}
+
+/* Menghormati pengaturan minim gerakan */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

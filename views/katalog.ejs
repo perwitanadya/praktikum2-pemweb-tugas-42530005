@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Beranda</a>
+            <a href="/about">Tentang</a>
+            <a href="/katalog">Katalog Buku</a>
+            <a href="/tambah">Tambah Buku</a>
+        </nav>
+    </header>
+
+    <main class="konten">
+        <p class="label">KOLEKSI KAMI</p>
+        <h1>Katalog Buku</h1>
+        <p>Jelajahi koleksi buku yang tersedia di perpustakaan.</p>
+
+        <div class="daftar-buku">
+            <% buku.forEach(function(item) { %>
+                <article class="kartu-buku">
+                    <div class="sampul">BOOK</div>
+                    <p class="kategori"><%= item.kategori %></p>
+                    <h2><%= item.judul %></h2>
+                    <p>Penulis: <%= item.penulis %></p>
+                    <p>Tahun terbit: <%= item.tahun %></p>
+                </article>
+            <% }); %>
+        </div>
+
+        <a class="tombol" href="/tambah">+ Tambah Buku</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katalog Perpustakaan</p>
+    </footer>
+</body>
+</html>

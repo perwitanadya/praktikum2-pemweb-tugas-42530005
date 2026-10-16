@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= judul %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Beranda</a>
+            <a href="/about">Tentang</a>
+            <a href="/katalog">Katalog Buku</a>
+            <a href="/tambah">Tambah Buku</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <p class="label">RUANG BACA DIGITAL</p>
+        <h1>Temukan Cerita Favoritmu.</h1>
+        <p>
+            Selamat datang di Katalog Perpustakaan,
+            tempat menemukan buku untuk menambah wawasan dan inspirasi.
+        </p>
+
+        <p class="jumlah">
+            Saat ini tersedia <strong><%= jumlahBuku %></strong> buku dalam katalog.
+        </p>
+
+        <a class="tombol" href="/katalog">Jelajahi Katalog</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katalog Perpustakaan</p>
+    </footer>
+</body>
+</html>
